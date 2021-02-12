@@ -18,7 +18,7 @@ public class assessment_StepDefinition {
 
     @Given("^User is on the Playtech page$")
     public void user_is_on_the_Playtech_page(){
-        System.setProperty("webdriver.chrome.driver", "C:/Users/ashwini.karnatak/IdeaProjects/PlayTech/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
