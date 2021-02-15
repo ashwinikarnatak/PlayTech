@@ -1,6 +1,6 @@
-Feature: To ensure the legal age functionality on the sites
+Feature: To ensure the legal age functionality and Count of different values under About Us
 
-  Scenario: To ensure the legal age functionality on the site
+  Scenario: To ensure the legal age functionality and Count of different values under About Us
     Given User is on the Playtech page
     When User enters the invalid age
     Then User is displayed with an error message
