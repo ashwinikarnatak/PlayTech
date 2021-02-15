@@ -39,7 +39,7 @@ public class assessment_StepDefinition {
     }
 
     @Then("^User is displayed with an error message$")
-    public void user_is_displayed_with_an_error_message() {
+    public void user_is_displayed_with_an_error_message(){
         String error = driver.findElement(By.xpath("//span[@class='age-error']")).getText();
         Assert.assertEquals(error, "Sorry you must be over 18 to enter.");
     }
@@ -70,29 +70,29 @@ public class assessment_StepDefinition {
         executor.executeScript("window.scrollBy(0,1500)");
         Thread.sleep(5000);
         String employeeUI = driver.findElement(By.xpath("(//div[contains(@class,'stat-count')])[1]")).getAttribute("data-odometer-count");
-        System.out.println("Number of Employees: " + employeeUI);
-        Assert.assertEquals(employees, employeeUI);
+        System.out.println("Number of Employees: "+employeeUI);
+        Assert.assertEquals(employees,employeeUI);
     }
 
     @Then("^User verifies that Number of countries Playtech has offices in is \"([^\"]*)\"$")
-    public void user_verifies_that_Number_of_countries_Playtech_has_offices_in_is(String offices) {
+    public void user_verifies_that_Number_of_countries_Playtech_has_offices_in_is(String offices){
         String officesUI = driver.findElement(By.xpath("(//div[contains(@class,'stat-count')])[2]")).getAttribute("data-odometer-count");
-        System.out.println("Number of countries Playtech has offices: " + officesUI);
-        Assert.assertEquals(offices, officesUI);
+        System.out.println("Number of countries Playtech has offices: "+officesUI);
+        Assert.assertEquals(offices,officesUI);
     }
 
     @Then("^User verifies that count of Global licensees is \"([^\"]*)\"$")
     public void user_verifies_that_count_of_Global_licensees_is(String licenses) {
         String licensesUI = driver.findElement(By.xpath("(//div[contains(@class,'stat-count')])[3]")).getAttribute("data-odometer-count");
-        System.out.println("Global licensees: " + licensesUI);
-        Assert.assertEquals(licenses, licensesUI);
+        System.out.println("Global licensees: "+licensesUI);
+        Assert.assertEquals(licenses,licensesUI);
     }
 
     @Then("^User verifies that Regulated Jurisdictions are \"([^\"]*)\"$")
     public void user_verifies_that_Regulated_Jurisdictions_are(String jurisdictions) {
         String jurisdictionsUI = driver.findElement(By.xpath("(//div[contains(@class,'stat-count')])[4]")).getAttribute("data-odometer-count");
-        System.out.println("Regulated Jurisdictions: " + jurisdictionsUI);
-        Assert.assertEquals(jurisdictions, jurisdictionsUI);
+        System.out.println("Regulated Jurisdictions: "+jurisdictionsUI);
+        Assert.assertEquals(jurisdictions,jurisdictionsUI);
     }
 
     @Then("^Close the browser$")
