@@ -1,7 +1,7 @@
-This is BDD Cucumber framework using JUnit with POM Implementation.
+This is a Maven BDD Cucumber framework using JUnit with POM Implementation.
 Selenix Extent Reports have been implemented to generate the Execution Output Report
 Rebuilt the Project before execution
 To execute the Framework you need to Run it via the Runner File called "assessment_TestRunner"
 
-File Path:
+Test Runner File Path:
 \src\test\java\TestRunner\assessment_TestRunner
