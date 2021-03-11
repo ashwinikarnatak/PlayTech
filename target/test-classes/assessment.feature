@@ -1,13 +1,8 @@
-Feature: To ensure the legal age functionality and Count of different values under About Us
+Feature: To Order a product and update the personal information
 
-  Scenario: To ensure the legal age functionality and Count of different values under About Us
-    Given User is on the Playtech page
-    When User enters the invalid age
-    Then User is displayed with an error message
-    When User enters the valid age
-    Then User is navigated to About Us page
-    Then User verifies that Number of Employees is "5900"
-    And User verifies that Number of countries Playtech has offices in is "19"
-    And User verifies that count of Global licensees is "140"
-    And User verifies that Regulated Jurisdictions are "20"
+  Scenario: To Order a product and update the personal information
+    Given User logs in via "Chrome" using valid credentials
+    When User orders a T-Shirt
+    Then User verify in Order History
+    Then User updates First Name in My Account
     Then Close the browser
